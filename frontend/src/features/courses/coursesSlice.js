@@ -33,6 +33,11 @@ const coursesSlice = createSlice({
       .addCase(fetchCourses.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
+      })
+      .addCase(enrollStudent.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        // Append the enrolled course to existing courses in state
+        state.courses.push(action.payload); // Assuming action.payload is the enrolled course object
       });
   },
 });

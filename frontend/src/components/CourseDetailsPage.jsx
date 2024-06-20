@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import axios from "../api/axios";
-import { enrollStudent } from "../features/courses/coursesSlice"; // Ensure this is the correct import path
+import { enrollStudent } from "../features/courses/coursesSlice";
+import { fetchStudentCourses } from "../features/students/studentsSlice"; // Import fetchStudentCourses action
 
 const CourseDetailsPage = () => {
   const { courseId } = useParams();
@@ -15,7 +16,7 @@ const CourseDetailsPage = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`api/courses/${courseId}`); // Ensure the base URL is correct
+        const response = await axios.get(`api/courses/${courseId}`);
         setCourse(response.data);
       } catch (err) {
         setError(err.message);
@@ -31,6 +32,7 @@ const CourseDetailsPage = () => {
     try {
       await dispatch(enrollStudent({ courseId, studentId }));
       alert("Enrolled successfully!");
+      dispatch(fetchStudentCourses(studentId));
     } catch (err) {
       alert("Failed to enroll");
     }

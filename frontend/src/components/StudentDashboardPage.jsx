@@ -1,4 +1,3 @@
-// StudentDashboardPage.jsx
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchStudentCourses } from "../features/students/studentsSlice";
@@ -32,8 +31,6 @@ const StudentDashboardPage = () => {
             alt={course.name}
             className="w-32 h-auto"
           />
-          {/* Add due date if available */}
-          {/* <p>Due Date: {course.dueDate}</p> */}
         </Link>
       </div>
     ));

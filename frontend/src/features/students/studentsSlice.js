@@ -2,18 +2,18 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from '../../api/axios';
 
 const initialState = {
-  studentId: '6672bbfd76ee975bc7192a2f', // Assuming this is the logged-in student's ID
+  studentId: '667491d6258e2a3301b6b461', 
   courses: [],
   status: 'idle',
   error: null,
 };
 
-export const fetchStudentCourses = createAsyncThunk(
+export const fetchStudentCourses = createAsyncThunk( 
   'students/fetchStudentCourses',
   async (studentId) => {
     try {
       const response = await axios.get(`/api/students/${studentId}/courses`);
-      return response.data; // Assuming response.data is an array of courses
+      return response.data; 
     } catch (error) {
       throw Error('Failed to fetch courses.');
     }
