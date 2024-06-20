@@ -33,6 +33,7 @@ router.post('/', async (req, res) => {
       description: req.body.description,
       enrollmentStatus: req.body.enrollmentStatus,
       thumbnail: req.body.thumbnail,
+      likes: req.body.likes,
       duration: req.body.duration,
       schedule: req.body.schedule,
       location: req.body.location,

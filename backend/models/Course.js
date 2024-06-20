@@ -13,6 +13,7 @@ const courseSchema = new Schema({
   enrollmentStatus: { type: String, enum: ['Open', 'Closed', 'In Progress'] },
   thumbnail: String,
   duration: String,
+  likes: Number,
   schedule: String,
   location: String,
   prerequisites: [String],

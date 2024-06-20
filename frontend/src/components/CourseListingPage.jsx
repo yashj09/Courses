@@ -62,6 +62,10 @@ const CourseListingPage = () => {
                   <span className="text-sm text-muted-foreground">
                     {course.instructor}
                   </span>
+                  <h2 className="ml-20">
+                    Likes:
+                    {course.likes || 0}
+                  </h2>
                 </div>
               </div>
             </Link>
