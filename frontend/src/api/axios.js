@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/', // Update with your backend base URL
+  baseURL: 'https://coursesbackend-fbnbxfykr-yash-jains-projects.vercel.app/', // Update with your backend base URL
 });
 
 export default axiosInstance;
