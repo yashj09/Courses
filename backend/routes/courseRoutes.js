@@ -34,6 +34,8 @@ router.post('/', async (req, res) => {
       enrollmentStatus: req.body.enrollmentStatus,
       thumbnail: req.body.thumbnail,
       likes: req.body.likes,
+      progress: req.body.progress,
+      completed: req.body.completed,
       duration: req.body.duration,
       schedule: req.body.schedule,
       location: req.body.location,

@@ -14,6 +14,8 @@ const courseSchema = new Schema({
   thumbnail: String,
   duration: String,
   likes: Number,
+  progress: Number,
+  completed:Boolean,
   schedule: String,
   location: String,
   prerequisites: [String],
