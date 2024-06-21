@@ -21,8 +21,10 @@ const CourseListingPage = () => {
   const filteredCourses = Array.isArray(courses)
     ? courses.filter(
         (course) =>
-          course.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          course.instructor.toLowerCase().includes(searchQuery.toLowerCase())
+          (course.name &&
+            course.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          (course.instructor &&
+            course.instructor.toLowerCase().includes(searchQuery.toLowerCase()))
       )
     : [];
   let content;
