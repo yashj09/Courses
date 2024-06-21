@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
-import CourseListingPage from "./components/CourseListingPage";
-import CourseDetailsPage from "./components/CourseDetailsPage";
-import StudentDashboardPage from "./components/StudentDashboardPage";
+import CourseListingPage from "./pages/CourseListingPage";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
+import StudentDashboardPage from "./pages/StudentDashboardPage";
 import Navbar from "./components/Navbar";
 
 function App() {
