@@ -31,7 +31,7 @@ const studentsSlice = createSlice({
       })
       .addCase(fetchStudentCourses.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.courses = action.payload; // Assuming action.payload is the array of courses
+        state.courses = action.payload; 
       })
       .addCase(fetchStudentCourses.rejected, (state, action) => {
         state.status = 'failed';

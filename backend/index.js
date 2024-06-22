@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://courses-seven-orcin.vercel.app']
+  origin: ['http://localhost:5173', 'https://0xcourses.vercel.app']
 }));
 connect(process.env.MONGODB_URI).then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
